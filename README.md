@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Wild Oasis 🌴
 
-## Getting Started
+A **hotel booking web app** built with **Next.js App Router**, **Supabase**, and **NextAuth**.
 
-First, run the development server:
+## 🚀 Live Demo
+
+👉 [the-wild-oasis-demo-eta.vercel.app](https://the-wild-oasis-demo-eta.vercel.app/)
+
+---
+
+## ✨ Features
+
+* 🏨 View available cabins and their details.
+* 🔐 **Google Sign-In** via `NextAuth`.
+* 📆 Authenticated users can:
+
+  * Create new bookings.
+  * View their own bookings.
+  * Edit or delete existing bookings.
+* 📦 Backed by **Supabase** as a backend service (auth + database).
+* 🧭 Built using **Next.js 14 (App Router)**.
+* 🧪 Strict access control — unauthenticated users can't book, view, or modify bookings.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology      | Usage                            |
+| --------------- | -------------------------------- |
+| Next.js 14      | Frontend framework (App Router)  |
+| Supabase        | Backend (DB + Auth)              |
+| NextAuth        | Google authentication            |
+| React 18        | UI library                       |
+| Tailwind CSS    | Styling                          |
+| Date-fns        | Date formatting and handling     |
+| React DayPicker | Interactive calendar for booking |
+
+---
+
+
+
+---
+
+## 📦 Installation
 
 ```bash
+git clone https://github.com/Moaaz-Sayed/the-wild-oasis-website.git
+cd the-wild-oasis-website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Make sure to add your environment variables for Supabase and NextAuth.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📄 License
 
-## Learn More
+This project is for learning/demo purposes. No license applied.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🙋‍♂️ Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Built with ❤️ by [Moaaz Sayed](https://github.com/Moaaz-Sayed)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Not responsive yet — optimized for desktop.
+* Built mainly to practice advanced **Next.js features** and **integration with Supabase**.
