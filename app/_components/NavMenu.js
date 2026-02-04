@@ -1,18 +1,35 @@
  "use client";
  
- import { useState } from "react";
+ import { useEffect, useRef, useState } from "react";
  import Link from "next/link";
  import Image from "next/image";
  
  function NavMenu({ user }) {
-   const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClickOutside(event) {
+      if (!menuRef.current) return;
+      if (!menuRef.current.contains(event.target)) setOpen(false);
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [open]);
  
    function handleClose() {
      setOpen(false);
    }
  
   return (
-    <nav className="relative z-10">
+    <nav className="relative z-10" ref={menuRef}>
       <div className="flex items-center gap-3">
          <ul className="hidden md:flex items-center gap-10 lg:gap-14 text-lg lg:text-xl">
            <li>
