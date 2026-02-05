@@ -8,7 +8,7 @@ function UpdateProfileForm({ guest, children }) {
   return (
     <form
       action={updateGuest}
-      className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+      className="bg-primary-900 py-6 sm:py-8 px-4 sm:px-8 text-base sm:text-lg flex gap-4 sm:gap-6 flex-col"
     >
       <div className="space-y-2">
         <label>Full name</label>
@@ -16,7 +16,7 @@ function UpdateProfileForm({ guest, children }) {
           disabled
           defaultValue={fullName}
           name="fullName"
-          className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
+          className="px-4 sm:px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-md disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
         />
       </div>
 
@@ -26,7 +26,7 @@ function UpdateProfileForm({ guest, children }) {
           disabled
           defaultValue={email}
           name="email"
-          className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
+          className="px-4 sm:px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-md disabled:cursor-not-allowed disabled:bg-gray-600 disabled:text-gray-400"
         />
       </div>
 
@@ -49,11 +49,11 @@ function UpdateProfileForm({ guest, children }) {
         <input
           name="nationalID"
           defaultValue={nationalID}
-          className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-sm"
+          className="px-4 sm:px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-md"
         />
       </div>
 
-      <div className="flex justify-end items-center gap-6">
+      <div className="flex justify-end items-center gap-4 sm:gap-6">
         <SubmitButton pendingLabel="Updating...">Update profile</SubmitButton>
       </div>
     </form>
